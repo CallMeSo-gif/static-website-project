@@ -61,3 +61,8 @@ data "aws_iam_policy_document" "public_read_policy" {
 output "name" {
   value = aws_s3_bucket.tf_bucket.bucket
 }
+
+output "website_endpoint" {
+  value = aws_s3_bucket.tf_bucket.website_endpoint
+  
+}
