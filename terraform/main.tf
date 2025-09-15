@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "tf_bucket" {
   bucket = var.bucket_name
-
+ 
 }
 
 resource "aws_s3_bucket_website_configuration" "static_website" {
@@ -15,20 +15,6 @@ resource "aws_s3_bucket_website_configuration" "static_website" {
     suffix = "index.html"
   }
 
-/*
-  error_document {
-    key = "error.html"
-  }
-
-  routing_rule {
-    condition {
-      key_prefix_equals = "docs/"
-    }
-    redirect {
-      replace_key_prefix_with = "documents/"
-  }
-
-  */
 }
 
 resource "aws_s3_bucket_public_access_block" "public_access" {
