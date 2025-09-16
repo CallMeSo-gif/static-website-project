@@ -7,4 +7,11 @@ terraform {
       name = "static-website-project"
     }
   }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+ }
 }
