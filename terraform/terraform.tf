@@ -1,11 +1,8 @@
 # This block configures Terraform to run in the HCP Terraform cloud
 terraform {
-  cloud {
-    organization = "Projects-tests" # Found in your HCP settings
-
-    workspaces {
-      name = "static-website-project"
-    }
+   backend "s3" {
+    bucket = "remote-backend-tf-state-12345678"
+    region = "us-west-1"
   }
 
   required_providers {
@@ -15,3 +12,4 @@ terraform {
     }
  }
 }
+

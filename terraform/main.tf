@@ -1,5 +1,12 @@
 provider "aws" {
   region = "eu-west-1"
+  default_tags {
+    tags = {
+      Owner       = "Sorelle Kana"
+      GitRepo     = ""
+      Project     = "Static Website hosting on S3"
+    }
+  }
 }
 
 
